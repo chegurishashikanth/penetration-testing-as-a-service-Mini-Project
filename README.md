@@ -64,3 +64,45 @@ This project **automates penetration testing** using **machine learning** and **
 ```bash
 git clone https://github.com/yourusername/PTaaS.git
 cd PTaaS
+
+
+Step 2: Set up a Virtual Environment
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate   # On macOS/Linux
+venv\Scripts\activate      # On Windows
+
+
+Step 3: Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+
+
+
+Step 4: Run the Flask App
+bash
+Copy
+Edit
+python app.py
+
+Step 5: Access the Web Interface
+Open http://127.0.0.1:5000/ in your browser
+Enter a target URL and start scanning
+
+📊 Execution & Results
+✅ Detected Vulnerabilities
+Open Ports Scan (e.g., HTTP, SSH, FTP)
+SQL Injection & XSS detection
+SSL/TLS security checks
+AI-generated security insights & recommendations
+
+
+Future Enhancements
+✅ Broader Vulnerability Detection – Add CSRF, command injection, privilege escalation testing
+✅ Advanced Reporting & Alerts – Real-time dashboards, security alerts via email/SMS
+✅ Scalability Improvements – Support bulk scanning, cloud security integration (AWS, Azure, Docker)
+✅ Enhanced Machine Learning – Train models with larger datasets for better attack predictions
