@@ -66,30 +66,38 @@ git clone https://github.com/yourusername/PTaaS.git
 cd PTaaS
 
 
-Step 2: Set up a Virtual Environment
-bash
-Copy
-Edit
+### **Step 2:  Set up a Virtual Environment**
 python -m venv venv
 source venv/bin/activate   # On macOS/Linux
 venv\Scripts\activate      # On Windows
 
 
-Step 3: Install Dependencies
-bash
-Copy
-Edit
+### **Step 3:Install Dependencies**
 pip install -r requirements.txt
 
 
+### **Step 4:Install Required Security Tools**
 
-Step 4: Run the Flask App
-bash
-Copy
-Edit
+ Nmap (for network scanning)
+ sudo apt install nmap  # Linux
+ brew install nmap      # macOS
+
+ Metasploit (for exploit testing)
+ curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/msfupdate | bash
+
+ OpenVAS (for vulnerability scanning)
+ sudo apt install openvas
+
+### **Step 5:  Set up the Environment File (.env)**
+Create a .env file in the project root and add your OpenAI API key (if using AI-based insights).
+
+OPENAI_API_KEY=your_openai_api_key_here
+
+### **Step 6:  Run the Flask App**
 python app.py
 
-Step 5: Access the Web Interface
+
+### **Step 7: Access the Web Interface**
 Open http://127.0.0.1:5000/ in your browser
 Enter a target URL and start scanning
 
@@ -101,7 +109,8 @@ SSL/TLS security checks
 AI-generated security insights & recommendations
 
 
-Future Enhancements
+
+🎯 Future Enhancements
 ✅ Broader Vulnerability Detection – Add CSRF, command injection, privilege escalation testing
 ✅ Advanced Reporting & Alerts – Real-time dashboards, security alerts via email/SMS
 ✅ Scalability Improvements – Support bulk scanning, cloud security integration (AWS, Azure, Docker)
